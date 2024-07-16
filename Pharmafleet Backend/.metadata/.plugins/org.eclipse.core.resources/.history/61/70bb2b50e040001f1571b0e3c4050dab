@@ -1,0 +1,7 @@
+package com.pharmaFleetBackend.serviceLayer;
+
+import com.pharmaFleetBackend.Entity.Users;
+
+public interface ServiceProvider {
+	public Users AddUser(Users user);
+}

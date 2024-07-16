@@ -1,0 +1,65 @@
+package com.pharmaFleetBackend.serviceLayer;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.pharmaFleetBackend.DataAccesslayer.DataAccess;
+import com.pharmaFleetBackend.Entity.Users;
+import com.pharmaFleetBackend.LoginDetails.LoginInfo;
+import com.pharmaFleetBackend.loginResponse.LoginResponse;
+
+@Service
+public class SerivecManImpl implements ServiceProvider{
+	@Autowired
+	private DataAccess database;
+	
+
+	@Override
+	public Users AddUser(Users user) {
+		BCryptPasswordEncoder bCrypt =  new BCryptPasswordEncoder();
+		
+		String bCryptPassOrd = bCrypt.encode(user.getPassword());
+		user.setPassword(bCryptPassOrd);
+		return this.database.save(user);
+	}
+
+
+	@Override
+	public LoginResponse CheckLogin(LoginInfo login) {
+		
+		BCryptPasswordEncoder bCrypt =  new BCryptPasswordEncoder();
+		LoginInfo userEmail = database.findByEmail(login.getEmail());
+		if(userEmail!=null) {
+		 String	Loginpassword = login.getPassword();
+		 String DataBasedASavedPassword = (String) userEmail.getPassword();
+		 boolean IsValidUser = bCrypt.matches(Loginpassword, DataBasedASavedPassword);
+		 
+		 if(IsValidUser) {
+			Optional<LoginInfo> user = database.FindByEmailAndPassword(login.getEmail(), DataBasedASavedPassword);
+			
+			if(user.isPresent()) {
+				return new LoginResponse("Login SuccessFully " , true);
+			}
+			
+			else {
+				return new LoginResponse("Invalid username or password" , false);
+			}
+			 
+		 }
+		 
+		 else {
+			 return new LoginResponse("Passeord not Matched" , false);
+		 }
+		}
+		
+		else {
+			return new LoginResponse("Email Not Exisit" , false);
+		}
+	}
+	
+
+	
+}

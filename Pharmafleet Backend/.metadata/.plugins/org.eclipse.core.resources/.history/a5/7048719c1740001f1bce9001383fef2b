@@ -1,0 +1,8 @@
+spring.application.name=Pharma-Fleet-Backend
+spring.datasource.url=jdbc:mysql://localhost:3306/pharmafleet
+spring.datasource.username=root
+spring.datasource.password=sumit
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=update
+

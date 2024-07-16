@@ -1,0 +1,18 @@
+package com.pharmaFleetBackend.serviceLayer;
+
+
+
+import java.util.List;
+
+import com.pharmaFleetBackend.Entity.Users;
+import com.pharmaFleetBackend.LoginDetails.LoginInfo;
+import com.pharmaFleetBackend.MedicineApi.Medcines;
+import com.pharmaFleetBackend.loginResponse.LoginResponse;
+
+public interface ServiceProvider {
+	public Users AddUser(Users user);
+	
+	public LoginResponse CheckLogin(LoginInfo login);
+	
+	public List<Medcines> allMed();
+}

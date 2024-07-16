@@ -1,0 +1,35 @@
+package com.pharmaFleetBackend.serviceLayer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.pharmaFleetBackend.DataAccesslayer.DataAccess;
+import com.pharmaFleetBackend.Entity.Users;
+import com.pharmaFleetBackend.LoginDetails.LoginInfo;
+
+@Service
+public class SerivecManImpl implements ServiceProvider{
+	@Autowired
+	private DataAccess database;
+	
+
+	@Override
+	public Users AddUser(Users user) {
+		BCryptPasswordEncoder bCrypt =  new BCryptPasswordEncoder();
+		
+		String bCryptPassOrd = bCrypt.encode(user.getPassword());
+		user.setPassword(bCryptPassOrd);
+		return this.database.save(user);
+	}
+
+
+	@Override
+	public LoginResponse CheckLogin(LoginInfo login) {
+		
+		return null;
+	}
+	
+
+	
+}

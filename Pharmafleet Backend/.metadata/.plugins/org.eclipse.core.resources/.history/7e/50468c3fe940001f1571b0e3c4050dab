@@ -1,0 +1,13 @@
+package com.pharmaFleetBackend.serviceLayer;
+
+import org.springframework.http.ResponseEntity;
+
+import com.pharmaFleetBackend.Entity.Users;
+import com.pharmaFleetBackend.LoginDetails.LoginInfo;
+import com.pharmaFleetBackend.loginResponse.LoginResponse;
+
+public interface ServiceProvider {
+	public Users AddUser(Users user);
+	
+	public ResponseEntity<LoginResponse> CheckLogin(LoginInfo login);
+}

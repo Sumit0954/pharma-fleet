@@ -1,0 +1,5 @@
+package com.pharmaFleetBackend.SecurityConfiguration;
+
+public class WebSecurityConfiguration {
+
+}

@@ -1,0 +1,18 @@
+package com.pharmaFleetBackend.MedicineApi;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Medcines {
+	
+	@Id
+	private long medicineId;
+	private String medicineName;
+	private String description;
+	private String suggestedDoctorName;
+	private long price;
+	private String imageURL;
+	
+	
+}

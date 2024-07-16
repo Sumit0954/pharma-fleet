@@ -1,0 +1,43 @@
+package com.pharmaFleetBackend.LoginDetails;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class LoginInfo {
+	
+	@Id
+	private String Email;
+	private String Password;
+	
+	
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String Email) {
+		this.Email = Email;
+	}
+	public String getPassword() {
+		return Password;
+	}
+	public void setPassword(String password) {
+		Password = password;
+	}
+	public LoginInfo(String Email, String password) {
+		super();
+		this.Email = Email;
+		this.Password = password;
+	}
+	public LoginInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "LoginInfo [Email=" + Email + ", Password=" + Password + "]";
+	}
+	
+	
+	
+	
+}

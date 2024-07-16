@@ -1,0 +1,22 @@
+package com.pharmaFleetBackend.PresentationLayer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pharmaFleetBackend.Entity.Users;
+import com.pharmaFleetBackend.serviceLayer.ServiceProvider;
+
+@RestController
+public class MyController {
+	
+	@Autowired
+	private ServiceProvider service;
+	
+	@PostMapping("/users")
+	public Users RegisterUser(@RequestBody Users user) {
+		return this.service.AddUser(user);
+	}
+	
+}

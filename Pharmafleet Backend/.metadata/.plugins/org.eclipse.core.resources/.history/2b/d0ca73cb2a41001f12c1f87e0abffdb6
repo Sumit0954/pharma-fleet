@@ -1,0 +1,16 @@
+package com.pharmaFleetBackend.DataAccesslayer;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.pharmaFleetBackend.Entity.Users;
+
+
+public interface DataAccess extends JpaRepository<Users, Long>
+{
+	
+	Optional<Users>FindByEmailAndPassword(String email , String Password);
+	
+	Users findByEmail(String email);
+}

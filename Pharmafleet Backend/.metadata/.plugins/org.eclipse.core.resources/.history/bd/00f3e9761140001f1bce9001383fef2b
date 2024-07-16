@@ -1,0 +1,25 @@
+package com.pharmaFleetBackend.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+public class Users {
+	
+	@Id
+	private long userId;
+	private String FirstName;
+	private String Lastname;
+	private String Email;
+	private long Password;
+	
+	
+}

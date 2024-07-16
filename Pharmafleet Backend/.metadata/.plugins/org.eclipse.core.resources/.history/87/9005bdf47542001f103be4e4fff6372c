@@ -1,0 +1,5 @@
+package com.pharmaFleetBackend.MedicineRepo;
+
+public interface MedicineRepo {
+
+}

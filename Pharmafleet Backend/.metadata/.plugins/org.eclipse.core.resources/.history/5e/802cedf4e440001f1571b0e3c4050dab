@@ -1,0 +1,5 @@
+package com.pharmaFleetBackend.loginResponse;
+
+public class LoginResponse {
+
+}

@@ -1,0 +1,13 @@
+package com.pharmaFleetBackend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PharmaFleetBackendApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PharmaFleetBackendApplication.class, args);
+	}
+
+}

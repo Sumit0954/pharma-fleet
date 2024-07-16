@@ -1,0 +1,11 @@
+package com.pharmaFleetBackend.serviceLayer;
+
+import com.pharmaFleetBackend.Entity.Users;
+import com.pharmaFleetBackend.LoginDetails.LoginInfo;
+import com.pharmaFleetBackend.loginResponse.LoginResponse;
+
+public interface ServiceProvider {
+	public Users AddUser(Users user);
+	
+	public LoginResponse CheckLogin(LoginInfo login);
+}
