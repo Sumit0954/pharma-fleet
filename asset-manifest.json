@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5a479c9e.css",
+    "main.js": "/static/js/main.5afa78a3.js",
+    "static/js/787.9fb720db.chunk.js": "/static/js/787.9fb720db.chunk.js",
+    "static/media/loginPage.jpg": "/static/media/loginPage.dbe17f1c9b03284c6b08.jpg",
+    "static/media/bg.jpg": "/static/media/bg.30699a8d51594c3cc392.jpg",
+    "static/media/bg4.jpg": "/static/media/bg4.621501b9199c6f2aebe5.jpg",
+    "static/media/bg2.jpg": "/static/media/bg2.ab1a9e788969586c7a7a.jpg",
+    "static/media/bg5.jpg": "/static/media/bg5.23a6e021d6d8f1dade67.jpg",
+    "static/media/bg3.jpg": "/static/media/bg3.d11e68d5ecbc953140c3.jpg",
+    "static/media/about3.jpg": "/static/media/about3.266b871b2468ee0b0d34.jpg",
+    "static/media/about.jpg": "/static/media/about.972802c810ecc64c7349.jpg",
+    "static/media/whyus.jpg": "/static/media/whyus.81080bba771228ed3197.jpg",
+    "static/media/about-1.jpg": "/static/media/about-1.f948d69b55ca4f3c5a83.jpg",
+    "static/media/about-2.jpg": "/static/media/about-2.7f5140ef7fc908753414.jpg",
+    "static/media/people.png": "/static/media/people.809f7facb0adb7ce48c5.png",
+    "static/media/bg-departments.png": "/static/media/bg-departments.839401677133bcc73a55.png",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html",
+    "main.5a479c9e.css.map": "/static/css/main.5a479c9e.css.map",
+    "main.5afa78a3.js.map": "/static/js/main.5afa78a3.js.map",
+    "787.9fb720db.chunk.js.map": "/static/js/787.9fb720db.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a479c9e.css",
+    "static/js/main.5afa78a3.js"
+  ]
+}
